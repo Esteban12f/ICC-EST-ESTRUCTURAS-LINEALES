@@ -19,7 +19,7 @@ public class Queue {
             front = newNode;
             rear = newNode;
         } else {
-            newNode.setNext(newNode);
+            rear.setNext(newNode);
             rear = newNode;
         }
     }

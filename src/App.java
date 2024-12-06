@@ -8,8 +8,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         //runStack();
         //runStackGeneric();
-        //runQueue();
-        runQueueGeneric();
+        runQueue();
+        //runQueueGeneric();
     }
 
     public static void runStack(){
