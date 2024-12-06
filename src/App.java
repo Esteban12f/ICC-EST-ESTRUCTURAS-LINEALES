@@ -1,3 +1,5 @@
+import Materia.Queues.Queue;
+import Materia.Queues.QueueGeneric;
 import Materia.Stacks.Stack;
 import Materia.Stacks.StackGeneric;
 import models.Pantalla;
@@ -5,7 +7,9 @@ import models.Pantalla;
 public class App {
     public static void main(String[] args) throws Exception {
         //runStack();
-        runStackGeneric();
+        //runStackGeneric();
+        //runQueue();
+        runQueueGeneric();
     }
 
     public static void runStack(){
@@ -48,4 +52,35 @@ public class App {
         router.printStack();
     }
 
+    public static void runQueue(){
+        Queue cola = new Queue();
+
+        cola.enqueue(10);
+        cola.enqueue(20);
+        cola.enqueue(30);
+        cola.enqueue(40);
+
+        System.out.println(cola.peek());
+        System.out.println(cola.dequeue());
+        System.out.println(cola.dequeue());
+        System.out.println(cola.peek());
+    
+    }
+
+    public static void runQueueGeneric(){
+        QueueGeneric<String> router = new QueueGeneric<>();
+        router.push("Pablo");
+        router.push("Pedro");
+        router.push("Ana");
+
+        System.out.println("Peek: " + router.peek());
+        System.out.println("Next: " + router.popNode().getNext().getValue());
+        System.out.println("Peek: " + router.peek());
+
+        router.push("Maria");
+        
+        System.out.println("En la cola = " + router.getSize());
+        System.out.println("Peek: " + router.peek());
+        router.printQueue();
+    }
 }

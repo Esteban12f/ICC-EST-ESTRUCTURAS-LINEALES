@@ -25,10 +25,13 @@ public class Node {
         this.next = next;
     }
 
-    
-    public String toString(){
-        return "Value:" + value + " | Node: " + next;
+    @Override
+    public String toString() {
+        return "[Value = " + value + "]";
     }
+
+    
+    
 
     
 }
