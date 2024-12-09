@@ -1,15 +1,23 @@
+import Controllers.MenuController;
 import Materia.Queues.Queue;
 import Materia.Queues.QueueGeneric;
 import Materia.Stacks.Stack;
 import Materia.Stacks.StackGeneric;
+import Views.ConsoleView;
 import models.Pantalla;
 
 public class App {
     public static void main(String[] args) throws Exception {
         //runStack();
         //runStackGeneric();
-        runQueue();
+        //runQueue();
         //runQueueGeneric();
+        runContactManager();
+    }
+
+    public static void runContactManager(){
+        MenuController menuController = new MenuController();
+        menuController.showMenu();
     }
 
     public static void runStack(){
@@ -83,4 +91,5 @@ public class App {
         System.out.println("Peek: " + router.peek());
         router.printQueue();
     }
+
 }
