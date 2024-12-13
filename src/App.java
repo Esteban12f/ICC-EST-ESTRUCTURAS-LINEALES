@@ -1,4 +1,6 @@
 import Controllers.MenuController;
+import Ejercicio_01_sign.SingValidator;
+import Ejercicio_02_sorting.StackSorter;
 import Materia.Queues.Queue;
 import Materia.Queues.QueueGeneric;
 import Materia.Stacks.Stack;
@@ -12,7 +14,20 @@ public class App {
         //runStackGeneric();
         //runQueue();
         //runQueueGeneric();
-        runContactManager();
+        //runContactManager();
+        //runEjercicio01();
+        runEjercicio02();
+        
+    }
+
+    public static void runEjercicio01(){
+        SingValidator singValidator = new SingValidator();
+        singValidator.program();
+    }
+
+    public static void runEjercicio02(){
+        StackSorter stackSorter = new StackSorter();
+        stackSorter.program();
     }
 
     public static void runContactManager(){

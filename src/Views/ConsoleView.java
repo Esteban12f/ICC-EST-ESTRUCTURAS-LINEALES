@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ConsoleView {
     private Scanner scanner;
-    
+   
     public ConsoleView(){
         this.scanner = new Scanner(System.in);
     }
