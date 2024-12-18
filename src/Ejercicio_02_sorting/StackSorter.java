@@ -27,7 +27,7 @@ public class StackSorter {
                     break;
             
                 case 2:
-                    if (stack.isEmpty()){
+                    if (stack == null){
                         System.out.println("El stack esta vacio :/");
                     } else {
                         sortStack(stack);
@@ -86,15 +86,20 @@ public class StackSorter {
     }
 
     public void print(){
-        if(stack.isEmpty() || stack == null){
+        if(stack == null){
             System.out.println("No se han ingresado numeros al stack :/");
             return;
         }
         StackGeneric<Integer> stackAux = new StackGeneric<>();
         System.out.print("[");
+        boolean isFirst = true;
         while (!stack.isEmpty()) {
             int value = stack.pop();
-            System.out.print(value + ", ");
+            if (!isFirst){
+                System.out.print(", ");
+            }
+            System.out.print(value);
+            isFirst = false;
             stackAux.push(value);
         }
         System.out.println("]");
